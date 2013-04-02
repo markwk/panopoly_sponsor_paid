@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Panopoly Sponsor Paid feature.
+ */
+
+include_once 'panopoly_sponsor_paid.features.inc';
