@@ -202,83 +202,6 @@ function panopoly_sponsor_paid_field_default_fields() {
     ),
   );
 
-  // Exported field: 'commerce_product-paid_sponsorship-field_sponsoring_level'.
-  $fields['commerce_product-paid_sponsorship-field_sponsoring_level'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_sponsoring_level',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          'supporting' => 'Supporting Publisher',
-          'sponsoring' => 'Sponsoring Publisher',
-        ),
-        'allowed_values_function' => '',
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'list_text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'paid_sponsorship',
-      'commerce_cart_settings' => array(
-        'attribute_field' => 0,
-        'attribute_widget' => 'select',
-      ),
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 1,
-        ),
-        'line_item' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'node_teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'commerce_product',
-      'field_name' => 'field_sponsoring_level',
-      'label' => 'Sponsoring level',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '37',
-      ),
-    ),
-  );
-
   // Exported field: 'commerce_product-paid_sponsorship-field_sponsorship_level'.
   $fields['commerce_product-paid_sponsorship-field_sponsorship_level'] = array(
     'field_config' => array(
@@ -518,9 +441,12 @@ function panopoly_sponsor_paid_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'module' => 'inline_entity_form',
+        'settings' => array(
+          'fields' => array(),
+          'type_settings' => array(),
+        ),
+        'type' => 'inline_entity_form_single',
         'weight' => '32',
       ),
     ),
@@ -535,11 +461,11 @@ function panopoly_sponsor_paid_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_order_reference',
       'foreign keys' => array(
-        'node' => array(
+        'commerce_order' => array(
           'columns' => array(
-            'target_id' => 'nid',
+            'target_id' => 'order_id',
           ),
-          'table' => 'node',
+          'table' => 'commerce_order',
         ),
       ),
       'indexes' => array(
@@ -626,7 +552,6 @@ function panopoly_sponsor_paid_field_default_fields() {
   t('Order reference');
   t('Price');
   t('Product');
-  t('Sponsoring level');
   t('Sponsorship Level');
 
   return $fields;

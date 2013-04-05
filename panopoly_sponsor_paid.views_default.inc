@@ -35,7 +35,7 @@ function panopoly_sponsor_paid_views_default_views() {
     'title' => 'title',
     'created' => 'created',
     'changed' => 'changed',
-    'field_order' => 'field_order',
+    'field_order_reference' => 'field_order_reference',
     'edit_node' => 'edit_node',
     'delete_node' => 'edit_node',
   );
@@ -62,7 +62,7 @@ function panopoly_sponsor_paid_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_order' => array(
+    'field_order_reference' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -251,10 +251,10 @@ function panopoly_sponsor_paid_views_default_views() {
   $handler->display->display_options['fields']['status']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['status']['not'] = 0;
   /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_order']['id'] = 'field_order';
-  $handler->display->display_options['fields']['field_order']['table'] = 'field_data_field_order';
-  $handler->display->display_options['fields']['field_order']['field'] = 'field_order';
-  $handler->display->display_options['fields']['field_order']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_order_reference']['id'] = 'field_order_reference';
+  $handler->display->display_options['fields']['field_order_reference']['table'] = 'field_data_field_order_reference';
+  $handler->display->display_options['fields']['field_order_reference']['field'] = 'field_order_reference';
+  $handler->display->display_options['fields']['field_order_reference']['element_label_colon'] = FALSE;
   /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
@@ -320,10 +320,10 @@ function panopoly_sponsor_paid_views_default_views() {
   $handler->display->display_options['fields']['status']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['status']['not'] = 0;
   /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_order']['id'] = 'field_order';
-  $handler->display->display_options['fields']['field_order']['table'] = 'field_data_field_order';
-  $handler->display->display_options['fields']['field_order']['field'] = 'field_order';
-  $handler->display->display_options['fields']['field_order']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_order_reference']['id'] = 'field_order_reference';
+  $handler->display->display_options['fields']['field_order_reference']['table'] = 'field_data_field_order_reference';
+  $handler->display->display_options['fields']['field_order_reference']['field'] = 'field_order_reference';
+  $handler->display->display_options['fields']['field_order_reference']['element_label_colon'] = FALSE;
   /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
